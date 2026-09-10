@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Parts Solution — Replacement Parts Infrastructure</title>
+<link rel="stylesheet" href="yps-draft.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-mark">YPS</div>
+      <span class="nav-logo-text">Your Parts Solution</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#retailers">For Retailers</a></li>
+      <li><a href="#vendors">For Vendors</a></li>
+      <li><a href="#fullstack">Platform</a></li>
+      <li><a href="#analytics">Analytics</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary" href="#demo">Request a demo</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="#retailers" class="mobile-nav-link">For Retailers</a>
+  <a href="#vendors" class="mobile-nav-link">For Vendors</a>
+  <a href="#fullstack" class="mobile-nav-link">Platform</a>
+  <a href="#analytics" class="mobile-nav-link">Analytics</a>
+  <div class="mobile-menu-cta">
+    <a class="btn btn-orange btn-full mobile-nav-link" href="#demo">Request a demo</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Replacement Parts Infrastructure</div>
+      <h1>The smarter way to manage <span>replacement parts</span></h1>
+      <p class="hero-sub">YPS connects manufacturers, their vendors, and retailers on a single platform — from schematic-based ordering through fulfillment, claims, and analytics.</p>
+      <div class="hero-actions">
+        <a class="btn btn-orange btn-lg" href="#demo">Request a demo</a>
+        <a class="btn btn-outline-white btn-lg" href="#retailers">See how it works</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-header">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+        <span class="hero-visual-title">Schematic Builder — Parts Ordering</span>
+      </div>
+      <div class="schematic-preview">
+        <div class="schematic-img-placeholder">
+          <svg width="90%" height="90%" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="20" width="220" height="120" rx="4" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="100" y1="60" x2="180" y2="80" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <line x1="180" y1="80" x2="260" y2="50" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <line x1="180" y1="80" x2="200" y2="120" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <line x1="100" y1="60" x2="130" y2="120" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <circle cx="100" cy="60" r="14" fill="#2563eb" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <text x="100" y="64" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">A</text>
+            <circle cx="180" cy="80" r="14" fill="#2563eb" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <text x="180" y="84" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">B</text>
+            <circle cx="260" cy="50" r="14" fill="#0d9488" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <text x="260" y="54" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">C</text>
+            <circle cx="200" cy="120" r="14" fill="#f97316" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <text x="200" y="124" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">D</text>
+            <circle cx="130" cy="120" r="14" fill="#2563eb" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <text x="130" y="124" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="system-ui">E</text>
+            <rect x="108" y="46" width="68" height="16" rx="8" fill="rgba(37,99,235,0.85)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text x="142" y="57" text-anchor="middle" fill="white" font-size="8" font-weight="600" font-family="system-ui">PN-2031-B</text>
+          </svg>
+        </div>
+        <div class="marker-info">
+          <div class="marker-badge">Part B selected</div>
+          <span class="marker-label">PN-2031-B · Filter Assembly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span class="trust-label">Trusted by</span>
+    <div class="trust-logos">
+      <div class="trust-logo">
+        <div class="trust-logo-box">V1</div>
+        <span class="trust-logo-name">Vendor Co.</span>
+      </div>
+      <div class="trust-logo">
+        <div class="trust-logo-box" style="background:#374151">R2</div>
+        <span class="trust-logo-name">Retailer Network</span>
+      </div>
+      <div class="trust-logo">
+        <div class="trust-logo-box" style="background:#1e3a5c">M3</div>
+        <span class="trust-logo-name">Manufacturer Inc.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AUDIENCE -->
+<section id="retailers">
+  <div class="section-inner">
+    <div class="section-label">Who we serve</div>
+    <h2 class="section-title">Built for everyone in the parts chain</h2>
+    <p class="section-sub">Whether you're a retailer ordering parts, a vendor managing fulfillment, or a manufacturer running your parts program — YPS has a portal built for your role.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="card-icon icon-blue">🏪</div>
+        <div class="card-tag">Retailers</div>
+        <h3>Order the right part, every time</h3>
+        <p>Browse interactive parts diagrams, click the exact component you need, and send orders directly to vendors. No more guessing at part numbers from a flat list.</p>
+        <ul class="card-list">
+          <li>Schematic-based ordering — click to add</li>
+          <li>Order history and status tracking</li>
+          <li>Fill rate visibility by vendor</li>
+          <li>Fewer returns from accurate part selection</li>
+        </ul>
+        <a class="card-link" href="#how">See the retailer experience →</a>
+      </div>
+      <div class="audience-card featured" id="vendors">
+        <div class="card-icon icon-orange">🏭</div>
+        <div class="card-tag">Vendors</div>
+        <h3>Manage orders and track fulfillment</h3>
+        <p>One dashboard for all incoming orders across your retailer network. See what's shipping, what's on exception, and where fulfillment gaps are hurting your fill rate.</p>
+        <ul class="card-list">
+          <li>Incoming order management dashboard</li>
+          <li>Order exception tracking and reporting</li>
+          <li>Lead time analytics</li>
+          <li>Retailer-level visibility</li>
+        </ul>
+        <a class="card-link" href="#analytics">Explore vendor analytics →</a>
+      </div>
+      <div class="audience-card" id="platform">
+        <div class="card-icon icon-navy">🔧</div>
+        <div class="card-tag">Manufacturers</div>
+        <h3>Run your whole parts program</h3>
+        <p>Host your parts catalog and schematics on YPS. Give your authorized retailer network a polished ordering experience backed by real-time fulfillment data and a full inventory system.</p>
+        <ul class="card-list">
+          <li>Schematic builder and catalog hosting</li>
+          <li>Authorized retailer network management</li>
+          <li>Customer claims management</li>
+          <li>Inventory and parts tracking</li>
+        </ul>
+        <a class="card-link" href="#fullstack">See the full platform →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg" id="how">
+  <div class="section-inner">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">From schematic to delivery in four steps</h2>
+    <p class="section-sub">YPS handles the full lifecycle of a parts order so nothing falls through the cracks.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num active">1</div>
+        <h4>Browse schematics</h4>
+        <p>Retailers open the parts diagram and see every component laid out visually — no part number lookup required.</p>
+      </div>
+      <div class="step">
+        <div class="step-num active">2</div>
+        <h4>Click to order</h4>
+        <p>Click a marker on the diagram, confirm the part, and add to cart. The right part, captured correctly, every time.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Vendor fulfills</h4>
+        <p>The order routes to the correct vendor. Vendors manage status, fulfillment exceptions, and lead times in their own dashboard.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Analytics close the loop</h4>
+        <p>Fill rate, lead time, and exception data flow into dashboards for both retailers and the manufacturer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Platform features</div>
+    <h2 class="section-title">Everything the parts process needs</h2>
+    <p class="section-sub">YPS is a full-stack replacement parts infrastructure platform, not a point solution.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M15 9h.01M15 15h.01M9 15h.01"/></svg>
+        </div>
+        <h4>Interactive schematic builder</h4>
+        <p>Build and publish parts diagrams with clickable markers. Retailers place orders directly from the diagram with no part number lookup required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h4>Multi-tenant retailer portal</h4>
+        <p>Every retailer gets their own scoped experience — order history, cart, and status visibility — across as many vendors and product lines as needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4>Intelligence dashboards</h4>
+        <p>KPI cards, trend charts, and fill rate tables for vendors and retailers. Rolling 30-day windows with period-over-period comparisons built in.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 0 1 0 8h-1"/></svg>
+        </div>
+        <h4>Customer claims management</h4>
+        <p>Track and manage direct customer claims end to end. Tie claims back to specific orders, parts, and vendors so nothing gets lost in email threads.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h4>Parts inventory tracking</h4>
+        <p>Maintain a live inventory system for your parts catalog. Know what's in stock, what's on order, and where shortfalls are before they affect retailers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h4>PDF reports</h4>
+        <p>Periodic reports generated on demand. Downloadable, shareable, and always reflecting current order and fulfillment data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL STACK CAPABILITIES -->
+<div class="fullstack-section" id="fullstack">
+  <div class="fullstack-inner">
+    <div class="fullstack-header">
+      <div class="fullstack-label">More than an ordering portal</div>
+      <h2>The complete replacement parts operation</h2>
+      <p>YPS goes beyond order entry. Every part of the parts process — from catalog hosting to customer claims to inventory — lives in one connected platform.</p>
+    </div>
+    <div class="capability-grid">
+      <div class="capability-card">
+        <div class="cap-icon">📐</div>
+        <h4>Schematic hosting</h4>
+        <p>Host your full parts catalog with interactive diagrams. Retailers click the diagram, not a part number list, so orders come in accurately from the start.</p>
+      </div>
+      <div class="capability-card">
+        <div class="cap-icon">📦</div>
+        <h4>Fulfillment status reporting</h4>
+        <p>Track every order from placement through delivery. Exceptions, delays, and fulfillment gaps are visible in real time — no manual status chasing required.</p>
+      </div>
+      <div class="capability-card">
+        <div class="cap-icon">🔁</div>
+        <h4>Customer claims</h4>
+        <p>Manage warranty and replacement claims directly in the platform. Claims tie back to the original order, part, and vendor so every resolution has full context.</p>
+      </div>
+      <div class="capability-card">
+        <div class="cap-icon">🗄️</div>
+        <h4>Parts inventory system</h4>
+        <p>Track stock levels, on-order quantities, and part availability across your catalog. Know what's available before a retailer places an order.</p>
+      </div>
+      <div class="capability-card">
+        <div class="cap-icon">📊</div>
+        <h4>Retailer and vendor analytics</h4>
+        <p>Fill rate, lead time, and order volume data broken down by retailer, vendor, and part. Rolling windows with trend comparisons out of the box.</p>
+      </div>
+      <div class="capability-card">
+        <div class="cap-icon">👥</div>
+        <h4>Network management</h4>
+        <p>Manage your authorized retailer network, vendor relationships, and user access from a single admin surface. No spreadsheet required.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ANALYTICS -->
+<section class="analytics-section" id="analytics">
+  <div class="analytics-inner">
+    <div>
+      <div class="section-label">Intelligence</div>
+      <h2 class="section-title">Data that actually closes the loop</h2>
+      <p style="font-size:16px;color:var(--gray-600);line-height:1.7;margin-bottom:28px;">The YPS Intelligence dashboard gives vendors and retailers KPI cards, trend charts, and fill rate breakdowns — all updated in real time from live order data.</p>
+      <ul class="card-list" style="margin-bottom:28px;">
+        <li>Rolling 30-day KPI cards with period-over-period change</li>
+        <li>Trend charts for orders, parts shipped, fill rate, and lead time</li>
+        <li>Top 10 parts ordered and top exception parts by volume</li>
+        <li>Retailer-level fill rate and fulfillment status breakdowns</li>
+      </ul>
+      <a class="btn btn-primary" href="#demo">See it live</a>
+    </div>
+    <div class="analytics-dashboard">
+      <div class="dashboard-bar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+        <span>Vendor Intelligence — Rolling 30 days</span>
+      </div>
+      <div class="dashboard-body">
+        <div class="kpi-row">
+          <div class="kpi">
+            <div class="kpi-label">Fill Rate</div>
+            <div class="kpi-val">94.1%</div>
+            <div class="kpi-change kpi-up">↑ 2.3%</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Parts Shipped</div>
+            <div class="kpi-val">1,842</div>
+            <div class="kpi-change kpi-up">↑ 8.1%</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Exceptions</div>
+            <div class="kpi-val">3.2%</div>
+            <div class="kpi-change kpi-down">↑ 0.4%</div>
+          </div>
+        </div>
+        <div class="kpi-row">
+          <div class="kpi">
+            <div class="kpi-label">Avg Lead Time</div>
+            <div class="kpi-val">2.1d</div>
+            <div class="kpi-change kpi-up">↓ 0.3d</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Parts Ordered</div>
+            <div class="kpi-val">1,960</div>
+            <div class="kpi-change kpi-up">↑ 5.4%</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Open Claims</div>
+            <div class="kpi-val">14</div>
+            <div class="kpi-change" style="color:var(--gray-400)">— same</div>
+          </div>
+        </div>
+        <div class="chart-placeholder">
+          <div class="bar-item" style="height:45%;background:#dbeafe;"></div>
+          <div class="bar-item" style="height:55%;background:#dbeafe;"></div>
+          <div class="bar-item" style="height:48%;background:#dbeafe;"></div>
+          <div class="bar-item" style="height:70%;background:#bfdbfe;"></div>
+          <div class="bar-item" style="height:60%;background:#bfdbfe;"></div>
+          <div class="bar-item" style="height:75%;background:#93c5fd;"></div>
+          <div class="bar-item" style="height:65%;background:#93c5fd;"></div>
+          <div class="bar-item" style="height:80%;background:#60a5fa;"></div>
+          <div class="bar-item" style="height:72%;background:#60a5fa;"></div>
+          <div class="bar-item" style="height:88%;background:#3b82f6;"></div>
+          <div class="bar-item" style="height:82%;background:#3b82f6;"></div>
+          <div class="bar-item" style="height:92%;background:#2563eb;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">94<span>%</span></div>
+      <div class="stat-label">Average fill rate across the network</div>
+    </div>
+    <div>
+      <div class="stat-num">2.1<span>d</span></div>
+      <div class="stat-label">Average vendor lead time</div>
+    </div>
+    <div>
+      <div class="stat-num">30<span>%</span></div>
+      <div class="stat-label">Reduction in wrong-part returns</div>
+    </div>
+    <div>
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label">Order traceability — part to claim</div>
+    </div>
+  </div>
+</div>
+
+<!-- DEMO REQUEST FORM -->
+<section class="demo-section" id="demo">
+  <div class="demo-inner">
+    <div class="demo-left">
+      <div class="section-label">Request a demo</div>
+      <h2>See YPS in action</h2>
+      <p>Fill out the form and we'll schedule a walkthrough tailored to your role — whether you're a retailer, vendor, or manufacturer looking to run your parts program on YPS.</p>
+      <div class="demo-perks">
+        <div class="demo-perk">
+          <div class="perk-icon">🗓️</div>
+          <div class="perk-text">
+            <strong>Scheduled within 1 business day</strong>
+            <span>We'll reach out to confirm a time that works for your team.</span>
+          </div>
+        </div>
+        <div class="demo-perk">
+          <div class="perk-icon">🎯</div>
+          <div class="perk-text">
+            <strong>Tailored to your role</strong>
+            <span>Retailer, vendor, or manufacturer — we show you what's relevant to you.</span>
+          </div>
+        </div>
+        <div class="demo-perk">
+          <div class="perk-icon">💬</div>
+          <div class="perk-text">
+            <strong>No pressure, just the platform</strong>
+            <span>Ask questions, see a live walkthrough, and decide if YPS is the right fit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-form-card">
+      <h3>Get in touch</h3>
+      <form id="demo-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First name <span>*</span></label>
+            <input type="text" id="first-name" name="first_name" autocomplete="given-name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name <span>*</span></label>
+            <input type="text" id="last-name" name="last_name" autocomplete="family-name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Work email <span>*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@yourcompany.com" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company name <span>*</span></label>
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your company" required>
+        </div>
+        <div class="form-group">
+          <label for="role">Your role <span>*</span></label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="retailer">Retailer / Dealer</option>
+            <option value="vendor">Vendor / Supplier</option>
+            <option value="manufacturer">Manufacturer / Brand</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything you'd like us to know?</label>
+          <textarea id="message" name="message" placeholder="Tell us about your parts operation, what's not working today, or what you'd like to see in the demo."></textarea>
+        </div>
+        <button type="submit" class="btn btn-orange btn-full">Request my demo</button>
+        <p class="form-note">We'll only use your info to follow up about the demo.</p>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="success-icon">✓</div>
+        <h4>Request received</h4>
+        <p>We'll reach out within one business day to schedule your walkthrough.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="footer-logo" href="#">
+          <div class="footer-logo-mark">YPS</div>
+          <span class="footer-logo-text">Your Parts Solution</span>
+        </a>
+        <p class="footer-tagline">Comprehensive replacement parts infrastructure for manufacturers, vendors, and retailers.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="#retailers">For Retailers</a></li>
+          <li><a href="#vendors">For Vendors</a></li>
+          <li><a href="#platform">For Manufacturers</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Features</h5>
+        <ul>
+          <li><a href="#">Schematic builder</a></li>
+          <li><a href="#">Parts ordering</a></li>
+          <li><a href="#">Customer claims</a></li>
+          <li><a href="#">Inventory tracking</a></li>
+          <li><a href="#">PDF reports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#demo">Request a demo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Your Parts Solution. All rights reserved.</span>
+      <span class="footer-address">PO Box 35, Prairie du Sac, Wisconsin 53578</span>
+    </div>
+  </div>
+</footer>
+
+<script src="yps-draft.js"></script>
+</body>
+</html>
