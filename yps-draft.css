@@ -362,66 +362,6 @@ nav {
   color: rgba(255,255,255,0.5);
 }
 
-/* ── TRUST BAR ── */
-.trust-bar {
-  background: var(--gray-50);
-  border-bottom: 1px solid var(--gray-200);
-  padding: 24px 2rem;
-}
-
-.trust-bar-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.trust-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.trust-logos {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.trust-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.45;
-  filter: grayscale(1);
-}
-
-.trust-logo-box {
-  width: 32px;
-  height: 32px;
-  background: var(--gray-800);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  color: white;
-}
-
-.trust-logo-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--gray-800);
-}
-
 /* ── SECTIONS ── */
 section { padding: 96px 2rem; }
 
@@ -744,22 +684,6 @@ section { padding: 96px 2rem; }
 
 .bar-item { flex: 1; border-radius: 2px 2px 0 0; min-width: 0; }
 
-/* ── STATS ── */
-.stats-strip { background: var(--navy); padding: 64px 2rem; }
-
-.stats-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  text-align: center;
-}
-
-.stat-num { font-size: 40px; font-weight: 700; color: white; line-height: 1; margin-bottom: 6px; }
-.stat-num span { color: var(--orange-light); }
-.stat-label { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 500; }
-
 /* ── DEMO FORM ── */
 .demo-section {
   padding: 96px 2rem;
@@ -997,7 +921,6 @@ footer { background: var(--gray-800); padding: 48px 2rem 32px; }
   .features-grid { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: 1fr 1fr; }
   .analytics-inner { grid-template-columns: 1fr; }
-  .stats-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
 
   /* demo */
   .demo-section { padding: 64px 1.5rem; }
@@ -1011,8 +934,6 @@ footer { background: var(--gray-800); padding: 48px 2rem 32px; }
 
 @media (max-width: 520px) {
   .capability-grid { grid-template-columns: 1fr; }
-  .stats-inner { grid-template-columns: 1fr 1fr; }
-  .trust-bar-inner { gap: 24px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .demo-form-card { padding: 24px; }
