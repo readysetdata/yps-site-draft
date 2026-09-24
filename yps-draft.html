@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- NAV -->
 <nav id="main-nav">
   <div class="nav-inner">
@@ -18,7 +20,7 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#retailers">For Retailers</a></li>
       <li><a href="#vendors">For Vendors</a></li>
-      <li><a href="#fullstack">Platform</a></li>
+      <li><a href="#features">Platform</a></li>
       <li><a href="#analytics">Analytics</a></li>
     </ul>
     <div class="nav-right">
@@ -36,7 +38,7 @@
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <a href="#retailers" class="mobile-nav-link">For Retailers</a>
   <a href="#vendors" class="mobile-nav-link">For Vendors</a>
-  <a href="#fullstack" class="mobile-nav-link">Platform</a>
+  <a href="#features" class="mobile-nav-link">Platform</a>
   <a href="#analytics" class="mobile-nav-link">Analytics</a>
   <div class="mobile-menu-cta">
     <a class="btn btn-orange btn-full mobile-nav-link" href="#demo">Request a demo</a>
@@ -44,7 +46,7 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main">
   <div class="hero-inner">
     <div>
       <h1>The right part, from multiple vendors, <span>in one order</span></h1>
@@ -61,9 +63,10 @@
         <div class="dot dot-green"></div>
         <span class="hero-visual-title">Parts Ordering — Select from the schematic</span>
       </div>
-      <div class="schematic-preview">
+      <span class="sr-only">A parts schematic with numbered markers. Clicking a marker selects that part.</span>
+      <div class="schematic-preview" aria-hidden="true">
         <div class="schematic-img-placeholder">
-          <svg width="90%" height="90%" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+          <svg width="90%" height="90%" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="60" y="20" width="220" height="120" rx="4" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
             <line x1="100" y1="60" x2="180" y2="80" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
             <line x1="180" y1="80" x2="260" y2="50" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
@@ -97,48 +100,43 @@
   <div class="section-inner">
     <div class="section-label">Who we serve</div>
     <h2 class="section-title">Built for everyone in the parts chain</h2>
-    <p class="section-sub">Whether you're a retailer ordering parts, a vendor managing fulfillment, or a manufacturer running your parts program — YPS has a portal built for your role.</p>
+    <p class="section-sub">Whether you are ordering parts, filling orders, or running the whole program, there is a portal built for your role.</p>
     <div class="audience-grid">
       <div class="audience-card">
-        <div class="card-icon icon-blue">🏪</div>
+        <div class="card-icon icon-blue" aria-hidden="true">🏪</div>
         <div class="card-tag">Retailers</div>
-        <h3>Find the part you need</h3>
-        <p>Anyone on your team selects parts directly from the schematic and adds them to one cart. A single order can include parts from multiple vendors, so there is no separate ordering process per brand.</p>
+        <h3>Click the part, not a part number</h3>
+        <p>Anyone on your team opens the schematic, clicks the exact component, and adds it to one cart. A single order can cover every brand on the display.</p>
         <ul class="card-list">
-          <li>Select parts directly from schematics</li>
-          <li>One order across multiple vendors</li>
-          <li>Order history and status tracking</li>
-          <li>Fill rate visibility by vendor</li>
+          <li>One order instead of one per vendor</li>
           <li>Fewer wrong parts ordered</li>
+          <li>See where every order stands</li>
         </ul>
         <a class="card-link" href="#how">See the retailer experience →</a>
       </div>
       <div class="audience-card" id="vendors">
-        <div class="card-icon icon-orange">🏭</div>
+        <div class="card-icon icon-orange" aria-hidden="true">🏭</div>
         <div class="card-tag">Vendors</div>
-        <h3>Manage orders and track fulfillment</h3>
-        <p>Manage incoming orders across your retailer network in one dashboard. Retailers select parts directly from schematics to help avoid selection mistakes before you fulfill the order.</p>
+        <h3>One dashboard for every retailer</h3>
+        <p>Every incoming order from every retailer in one place, instead of a separate process for each account.</p>
         <ul class="card-list">
-          <li>Incoming order management dashboard</li>
-          <li>Order exception tracking and reporting</li>
-          <li>Lead time analytics</li>
-          <li>Retailer-level visibility</li>
+          <li>Every order in one queue</li>
           <li>Fewer wrong parts to process and return</li>
+          <li>Track status, exceptions and lead times</li>
         </ul>
-        <a class="card-link" href="#analytics">Explore vendor analytics →</a>
+        <a class="card-link" href="#analytics">See the vendor experience →</a>
       </div>
       <div class="audience-card" id="platform">
-        <div class="card-icon icon-navy">🔧</div>
+        <div class="card-icon icon-navy" aria-hidden="true">🔧</div>
         <div class="card-tag">Manufacturers</div>
-        <h3>Run your whole parts program</h3>
-        <p>Host your parts catalog and schematics on YPS. Give your authorized retailer network a polished ordering experience backed by real-time fulfillment data and a full inventory system.</p>
+        <h3>Your catalog, your network, your data</h3>
+        <p>We host your parts catalog as interactive schematics and give your authorized retailers a single place to order from.</p>
         <ul class="card-list">
-          <li>Schematics built and hosted for you</li>
-          <li>Authorized retailer network management</li>
-          <li>Customer claims management</li>
-          <li>Inventory and parts tracking</li>
+          <li>Your catalog, built and hosted by us</li>
+          <li>You decide which retailers are authorized</li>
+          <li>Claims and inventory in the same system</li>
         </ul>
-        <a class="card-link" href="#fullstack">See the full platform →</a>
+        <a class="card-link" href="#features">See the full platform →</a>
       </div>
     </div>
   </div>
@@ -153,23 +151,23 @@
     <div class="steps">
       <div class="step">
         <div class="step-num active">1</div>
-        <h4>Browse schematics</h4>
-        <p>Retailers open the parts schematic and see every component laid out visually — no part number lookup required.</p>
+        <h3>Open the schematic</h3>
+        <p>Your team sees every component laid out visually. Click the one you need, or search by part number if you already know it.</p>
       </div>
       <div class="step">
         <div class="step-num active">2</div>
-        <h4>Click to order</h4>
-        <p>Click a marker on the schematic, confirm the part, and add it to your cart. Combine parts from multiple vendors in a single order.</p>
+        <h3>Click to order</h3>
+        <p>Click a marker, confirm the part, add it to the cart. Combine parts from multiple vendors in one order.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h4>Vendors fulfill</h4>
-        <p>A single order can span multiple vendors. YPS routes each line to the right vendor, and each vendor manages status, fulfillment exceptions, and lead times in their own dashboard.</p>
+        <h3>Vendors fulfill</h3>
+        <p>A single order can span multiple vendors. YPS routes each line to the right one, and each vendor manages status, exceptions and lead times in their own dashboard.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <h4>Analytics close the loop</h4>
-        <p>Fill rate, lead time, and exception data flow into dashboards for both retailers and the manufacturer.</p>
+        <h3>Everything is recorded</h3>
+        <p>Every order, status change and ship date is captured against the part, the vendor and the retailer. When somebody asks why fill rates moved, the answer is in the data.</p>
       </div>
     </div>
   </div>
@@ -178,120 +176,74 @@
 <!-- FEATURES -->
 <section id="features">
   <div class="section-inner">
-    <div class="section-label">Platform features</div>
+    <div class="section-label">What's included</div>
     <h2 class="section-title">Everything the parts process needs</h2>
-    <p class="section-sub">YPS is a full-stack replacement parts infrastructure platform, not a point solution.</p>
+    <p class="section-sub">Ordering is the front door. Behind it is the rest of the operation.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M15 9h.01M15 15h.01M9 15h.01"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M15 9h.01M15 15h.01M9 15h.01"/></svg>
         </div>
-        <h4>Schematics we build for you</h4>
-        <p>Tell us your products and which parts are available for each. We build and publish the interactive schematics, so there is no tool for your team to learn and nobody to train. Your retailers order straight from the schematic.</p>
+        <h3>Schematics we build for you</h3>
+        <p>Tell us your products and which parts are available for each. We build and publish the interactive schematics. There is no tool for your team to learn and nobody to train.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M12 6v4M12 10H5v4M12 10h7v4"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/></svg>
         </div>
-        <h4>Multi-tenant retailer portal</h4>
-        <p>Every retailer gets their own scoped experience — order history, cart, and status visibility — across as many vendors and product lines as needed.</p>
+        <h3>Multi-vendor ordering</h3>
+        <p>One order can contain parts from any number of vendors. YPS splits it and routes each line automatically.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
-        <h4>Intelligence dashboards</h4>
-        <p>KPI cards, trend charts, and fill rate tables for vendors and retailers. Rolling 30-day windows with period-over-period comparisons built in.</p>
+        <h3>A portal for every retailer</h3>
+        <p>Each retailer gets their own scoped experience with their own catalog, order history and cart, across as many vendors as needed.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 0 1 0 8h-1"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
-        <h4>Customer claims management</h4>
-        <p>Track and manage direct customer claims end to end. Tie claims back to specific orders, parts, and vendors so nothing gets lost in email threads.</p>
+        <h3>Fulfillment tracking</h3>
+        <p>Follow every order from placement to delivery. Exceptions and delays are visible without chasing anyone for a status.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 0 1 0 8h-1"/></svg>
         </div>
-        <h4>Parts inventory tracking</h4>
-        <p>Maintain a live inventory system for your parts catalog. Know what's in stock, what's on order, and where shortfalls are before they affect retailers.</p>
+        <h3>Customer claims</h3>
+        <p>Manage warranty and replacement claims in the same system, tied back to the original order, part and vendor.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
         </div>
-        <h4>PDF reports</h4>
-        <p>Periodic reports generated on demand. Downloadable, shareable, and always reflecting current order and fulfillment data.</p>
+        <h3>Parts inventory</h3>
+        <p>Track stock levels, quantities on order and availability across the catalog, so shortfalls surface before a retailer hits one.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- FULL STACK CAPABILITIES -->
-<div class="fullstack-section" id="fullstack">
-  <div class="fullstack-inner">
-    <div class="fullstack-header">
-      <div class="fullstack-label">More than an ordering portal</div>
-      <h2>The complete replacement parts operation</h2>
-      <p>YPS goes beyond order entry. Every part of the parts process — from catalog hosting to customer claims to inventory — lives in one connected platform.</p>
-    </div>
-    <div class="capability-grid">
-      <div class="capability-card">
-        <div class="cap-icon">📐</div>
-        <h4>Catalog hosting</h4>
-        <p>Your full parts catalog lives on YPS as interactive schematics that we build and maintain. Retailers click the schematic, not a part number list, so orders come in accurately from the start.</p>
-      </div>
-      <div class="capability-card">
-        <div class="cap-icon">📦</div>
-        <h4>Fulfillment status reporting</h4>
-        <p>Track every order from placement through delivery. Exceptions, delays, and fulfillment gaps are visible in real time — no manual status chasing required.</p>
-      </div>
-      <div class="capability-card">
-        <div class="cap-icon">🔁</div>
-        <h4>Customer claims</h4>
-        <p>Manage warranty and replacement claims directly in the platform. Claims tie back to the original order, part, and vendor so every resolution has full context.</p>
-      </div>
-      <div class="capability-card">
-        <div class="cap-icon">🗄️</div>
-        <h4>Parts inventory system</h4>
-        <p>Track stock levels, on-order quantities, and part availability across your catalog. Know what's available before a retailer places an order.</p>
-      </div>
-      <div class="capability-card">
-        <div class="cap-icon">📊</div>
-        <h4>Retailer and vendor analytics</h4>
-        <p>Fill rate, lead time, and order volume data broken down by retailer, vendor, and part. Rolling windows with trend comparisons out of the box.</p>
-      </div>
-      <div class="capability-card">
-        <div class="cap-icon">👥</div>
-        <h4>Network management</h4>
-        <p>Manage your authorized retailer network, vendor relationships, and user access from a single admin surface. No spreadsheet required.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ANALYTICS -->
 <section class="analytics-section" id="analytics">
   <div class="analytics-inner">
     <div>
       <div class="section-label">Intelligence</div>
-      <h2 class="section-title">Data that actually closes the loop</h2>
-      <p style="font-size:16px;color:var(--gray-600);line-height:1.7;margin-bottom:28px;">The YPS Intelligence dashboard gives vendors and retailers KPI cards, trend charts, and fill rate breakdowns — all updated in real time from live order data.</p>
-      <ul class="card-list" style="margin-bottom:28px;">
-        <li>Rolling 30-day KPI cards with period-over-period change</li>
-        <li>Trend charts for orders, parts shipped, fill rate, and lead time</li>
-        <li>Top 10 parts ordered and top exception parts by volume</li>
-        <li>Retailer-level fill rate and fulfillment status breakdowns</li>
-      </ul>
+      <h2 class="section-title">The data behind every order</h2>
+      <p style="font-size:16px;color:var(--gray-600);line-height:1.7;margin-bottom:16px;">Fill rate, lead time and exception data, broken down by vendor, retailer and part.</p>
+      <p style="font-size:16px;color:var(--gray-600);line-height:1.7;margin-bottom:16px;">For retailers, it shows which vendors deliver on time and which parts your displays keep needing, so you know what your floor needs before a customer does.</p>
+      <p style="font-size:16px;color:var(--gray-600);line-height:1.7;margin-bottom:28px;">For vendors, repeat orders on the same part are a product signal, not just an ordering event. The data shows which part, how often, and where, so the problem can be fixed at the source instead of shipped again.</p>
       <a class="btn btn-primary" href="#demo">See it live</a>
     </div>
-    <div class="analytics-dashboard">
+    <span class="sr-only">An example dashboard showing fill rate, parts shipped, exceptions and lead time.</span>
+    <div class="analytics-dashboard" aria-hidden="true">
       <div class="dashboard-bar">
         <div class="dot dot-red"></div>
         <div class="dot dot-yellow"></div>
         <div class="dot dot-green"></div>
-        <span>Vendor Intelligence — Sample data — Rolling 30 days</span>
+        <span>Example dashboard, sample data</span>
       </div>
       <div class="dashboard-body">
         <div class="kpi-row">
@@ -352,8 +304,8 @@
   <div class="demo-inner">
     <div class="demo-left">
       <div class="section-label">Request a demo</div>
-      <h2>See YPS in action</h2>
-      <p>Fill out the form and we'll schedule a walkthrough tailored to your role — whether you're a retailer, vendor, or manufacturer looking to run your parts program on YPS.</p>
+      <h2>See it with your own parts</h2>
+      <p>Tell us your role and we will walk you through what is relevant to you.</p>
       <div class="demo-perks">
         <div class="demo-perk">
           <div class="perk-icon">🗓️</div>
@@ -417,7 +369,7 @@
         <button type="submit" class="btn btn-orange btn-full">Request my demo</button>
         <p class="form-note">We'll only use your info to follow up about the demo.</p>
       </form>
-      <div class="form-success" id="form-success">
+      <div class="form-success" id="form-success" role="status" aria-live="polite">
         <div class="success-icon">✓</div>
         <h4>Request received</h4>
         <p>We'll reach out within one business day to schedule your walkthrough.</p>
@@ -438,7 +390,7 @@
         <p class="footer-tagline">Comprehensive replacement parts infrastructure for manufacturers, vendors, and retailers.</p>
       </div>
       <div class="footer-col">
-        <h5>Platform</h5>
+        <h3>Platform</h3>
         <ul>
           <li><a href="#retailers">For Retailers</a></li>
           <li><a href="#vendors">For Vendors</a></li>
@@ -447,7 +399,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Features</h5>
+        <h3>Features</h3>
         <ul>
           <li><a href="#features">Schematic builder</a></li>
           <li><a href="#features">Parts ordering</a></li>
@@ -457,7 +409,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Company</h5>
+        <h3>Company</h3>
         <ul>
           <li><a href="#demo">Request a demo</a></li>
           <li><a href="mailto:info@yourpartssolution.com">info@yourpartssolution.com</a></li>
