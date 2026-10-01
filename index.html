@@ -308,21 +308,21 @@
       <p>Tell us your role and we will walk you through what is relevant to you.</p>
       <div class="demo-perks">
         <div class="demo-perk">
-          <div class="perk-icon">🗓️</div>
+          <div class="perk-icon" aria-hidden="true">🗓️</div>
           <div class="perk-text">
-            <strong>Scheduled within 1 business day</strong>
+            <strong>Scheduled around you</strong>
             <span>We'll reach out to confirm a time that works for your team.</span>
           </div>
         </div>
         <div class="demo-perk">
-          <div class="perk-icon">🎯</div>
+          <div class="perk-icon" aria-hidden="true">🎯</div>
           <div class="perk-text">
             <strong>Tailored to your role</strong>
             <span>Retailer, vendor, or manufacturer — we show you what's relevant to you.</span>
           </div>
         </div>
         <div class="demo-perk">
-          <div class="perk-icon">💬</div>
+          <div class="perk-icon" aria-hidden="true">💬</div>
           <div class="perk-text">
             <strong>No pressure, just the platform</strong>
             <span>Ask questions, see a live walkthrough, and decide if YPS is the right fit.</span>
@@ -340,24 +340,24 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label for="first-name">First name <span>*</span></label>
+            <label for="first-name">First name <span aria-hidden="true">*</span></label>
             <input type="text" id="first-name" name="first_name" autocomplete="given-name" placeholder="Jane" required>
           </div>
           <div class="form-group">
-            <label for="last-name">Last name <span>*</span></label>
+            <label for="last-name">Last name <span aria-hidden="true">*</span></label>
             <input type="text" id="last-name" name="last_name" autocomplete="family-name" placeholder="Smith" required>
           </div>
         </div>
         <div class="form-group">
-          <label for="email">Work email <span>*</span></label>
+          <label for="email">Work email <span aria-hidden="true">*</span></label>
           <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@yourcompany.com" required>
         </div>
         <div class="form-group">
-          <label for="company">Company name <span>*</span></label>
+          <label for="company">Company name <span aria-hidden="true">*</span></label>
           <input type="text" id="company" name="company" autocomplete="organization" placeholder="Your company" required>
         </div>
         <div class="form-group">
-          <label for="role">Your role <span>*</span></label>
+          <label for="role">Your role <span aria-hidden="true">*</span></label>
           <select id="role" name="role" required>
             <option value="" disabled selected>Select your role</option>
             <option value="retailer">Retailer / Dealer</option>
@@ -375,9 +375,9 @@
         <p class="form-note">We'll only use your info to follow up about the demo.</p>
       </form>
       <div class="form-success" id="form-success" role="status" aria-live="polite">
-        <div class="success-icon">✓</div>
-        <h4>Request received</h4>
-        <p>We'll reach out within one business day to schedule your walkthrough.</p>
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h4 id="form-success-heading" tabindex="-1" aria-describedby="form-success-detail">Request received</h4>
+        <p id="form-success-detail">Thank you for your request. We will be in touch shortly.</p>
       </div>
     </div>
   </div>

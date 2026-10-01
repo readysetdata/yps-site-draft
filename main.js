@@ -8,6 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       e.preventDefault();
       closeMobileMenu();
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      /* Scrolling alone does not move focus, so a keyboard user stays where
+         they were and the next Tab continues from the link rather than from
+         the section. Sections are not focusable by default, so give the
+         target a tabindex and focus it. preventScroll stops the browser
+         jumping ahead of the smooth scroll. */
+      el.setAttribute('tabindex', '-1');
+      el.focus({ preventScroll: true });
     }
   });
 });
@@ -27,26 +35,43 @@ function openMobileMenu() {
   menuOpen = true;
   hamburger.classList.add('open');
   hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close menu');
   mobileMenu.classList.add('open');
   mobileMenu.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 }
 
-function closeMobileMenu() {
+function closeMobileMenu(restoreFocus = false) {
   menuOpen = false;
   hamburger.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
   mobileMenu.classList.remove('open');
   mobileMenu.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+
+  /* Only reclaim focus when asked. Following a link should leave focus with
+     the section it navigated to, which the smooth scroll handler sets. */
+  if (restoreFocus) hamburger.focus();
 }
 
 hamburger.addEventListener('click', () => {
-  menuOpen ? closeMobileMenu() : openMobileMenu();
+  menuOpen ? closeMobileMenu(true) : openMobileMenu();
 });
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && menuOpen) closeMobileMenu();
+  if (e.key === 'Escape' && menuOpen) closeMobileMenu(true);
+});
+
+/* The menu covers the page but does not remove what is underneath from the
+   tab order, so tabbing past the last link sends focus somewhere invisible.
+   Watch focus arriving anywhere on the page rather than focus leaving the
+   menu, because the hamburger sits outside the menu and focus moving off it
+   would otherwise go unnoticed. */
+document.addEventListener('focusin', e => {
+  if (!menuOpen) return;
+  if (e.target === hamburger || mobileMenu.contains(e.target)) return;
+  closeMobileMenu();
 });
 
 /* ── demo form ── */
@@ -87,7 +112,6 @@ form.addEventListener('submit', async e => {
 
   /* validation */
   let firstInvalid = null;
-  let emailInvalid = false;
 
   form.querySelectorAll('[required]').forEach(field => {
     clearFieldError(field);
@@ -97,14 +121,19 @@ form.addEventListener('submit', async e => {
     if (empty || badEmail) {
       field.style.borderColor = '#ef4444';
       field.setAttribute('aria-invalid', 'true');
-      if (badEmail && !empty) emailInvalid = true;
       if (!firstInvalid) firstInvalid = field;
     }
   });
 
   if (firstInvalid) {
+    /* Describe the field focus is about to land on, not whichever problem
+       happened to be detected. An empty first name plus a bad email would
+       otherwise focus the name and talk about the email. */
+    const firstIsBadEmail =
+      firstInvalid.type === 'email' && firstInvalid.value.trim() !== '';
+
     showError(
-      emailInvalid
+      firstIsBadEmail
         ? 'Enter a valid email address, for example jane@yourcompany.com.'
         : 'Please fill in every field marked with an asterisk.'
     );
@@ -145,6 +174,10 @@ form.addEventListener('submit', async e => {
 
     form.style.display = 'none';
     formSuccess.style.display = 'flex';
+
+    /* The submit button was inside the form we just hid, so focus has nowhere
+       to go. Move it to the confirmation. */
+    document.getElementById('form-success-heading').focus();
 
   } catch (err) {
     submitBtn.disabled = false;
