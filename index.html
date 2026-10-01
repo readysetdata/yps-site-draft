@@ -334,6 +334,10 @@
     <div class="demo-form-card">
       <h3>Get in touch</h3>
       <form id="demo-form" novalidate>
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-row">
           <div class="form-group">
             <label for="first-name">First name <span>*</span></label>
@@ -367,6 +371,7 @@
           <textarea id="message" name="message" placeholder="Tell us about your parts operation, what's not working today, or what you'd like to see in the demo."></textarea>
         </div>
         <button type="submit" class="btn btn-orange btn-full">Request my demo</button>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
         <p class="form-note">We'll only use your info to follow up about the demo.</p>
       </form>
       <div class="form-success" id="form-success" role="status" aria-live="polite">

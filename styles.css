@@ -887,3 +887,17 @@ footer { background: var(--gray-800); padding: 48px 2rem 32px; }
   .demo-form-card { padding: 24px; }
   nav { padding: 0 1rem; }
 }
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #b91c1c;
+}

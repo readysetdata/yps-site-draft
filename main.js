@@ -50,34 +50,124 @@ document.addEventListener('keydown', e => {
 });
 
 /* ── demo form ── */
+const FORM_ENDPOINT =
+  'https://script.google.com/macros/s/AKfycbym0Z-SV_Wr_C1br2yKjq8DMamoZ3jH-NNj6hV-1s6cu9tlSWCCTgOq3HGMBiC08Zga/exec';
+const SUBMIT_TIMEOUT_MS = 15000;
+
 const form = document.getElementById('demo-form');
 const formSuccess = document.getElementById('form-success');
+const formError = document.getElementById('form-error');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', e => {
+let submitting = false;
+
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function showError(message) {
+  formError.textContent = message;
+  formError.hidden = false;
+}
+
+function clearFieldError(field) {
+  field.style.borderColor = '';
+  field.removeAttribute('aria-invalid');
+}
+
+form.addEventListener('submit', async e => {
   e.preventDefault();
 
-  /* basic validation */
-  const required = form.querySelectorAll('[required]');
-  let valid = true;
-  required.forEach(field => {
-    field.style.borderColor = '';
-    if (!field.value.trim()) {
+  /* A second submit while one is in flight would create a duplicate row.
+     The disabled button covers most of it, but not a double Enter press
+     landing before the disable takes effect. */
+  if (submitting) return;
+
+  formError.hidden = true;
+
+  /* validation */
+  let firstInvalid = null;
+  let emailInvalid = false;
+
+  form.querySelectorAll('[required]').forEach(field => {
+    clearFieldError(field);
+    const value = field.value.trim();
+    const empty = !value;
+    const badEmail = field.type === 'email' && !isValidEmail(value);
+    if (empty || badEmail) {
       field.style.borderColor = '#ef4444';
-      valid = false;
+      field.setAttribute('aria-invalid', 'true');
+      if (badEmail && !empty) emailInvalid = true;
+      if (!firstInvalid) firstInvalid = field;
     }
   });
 
-  if (!valid) {
-    form.querySelector('[required]').focus();
+  if (firstInvalid) {
+    showError(
+      emailInvalid
+        ? 'Enter a valid email address, for example jane@yourcompany.com.'
+        : 'Please fill in every field marked with an asterisk.'
+    );
+    firstInvalid.focus();
     return;
   }
 
-  /* swap to success state */
-  form.style.display = 'none';
-  formSuccess.style.display = 'flex';
+  submitting = true;
+  const originalLabel = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), SUBMIT_TIMEOUT_MS);
+
+  try {
+    /* Trim on the way out so what is stored matches what was validated. */
+    const payload = {};
+    new FormData(form).forEach((value, key) => {
+      payload[key] = typeof value === 'string' ? value.trim() : value;
+    });
+
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      /* text/plain keeps this a "simple request" so the browser sends no
+         preflight. Apps Script cannot answer a preflight OPTIONS request, so
+         an application/json content type fails here with a CORS error. */
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+      signal: controller.signal
+    });
+
+    /* fetch does not reject on a 4xx or 5xx, so this has to be explicit. */
+    if (!res.ok) throw new Error('http ' + res.status);
+
+    const result = await res.json();
+    if (result.ok !== true) throw new Error(result.error || 'rejected');
+
+    form.style.display = 'none';
+    formSuccess.style.display = 'flex';
+
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalLabel;
+
+    /* A timeout or a dropped connection means we genuinely do not know
+       whether the server saved it. Telling someone it failed invites a
+       duplicate submission, so say we could not confirm instead. */
+    const unconfirmed = err.name === 'AbortError' || err instanceof TypeError;
+
+    showError(
+      unconfirmed
+        ? 'We could not confirm your request went through. Please email info@yourpartssolution.com rather than submitting again and we will check for you.'
+        : 'Something went wrong sending your request. Please email info@yourpartssolution.com and we will follow up.'
+    );
+
+  } finally {
+    clearTimeout(timeout);
+    submitting = false;
+  }
 });
 
-/* clear red border on input */
+/* clear the error state as soon as the field is touched */
 form.querySelectorAll('input, select, textarea').forEach(field => {
-  field.addEventListener('input', () => { field.style.borderColor = ''; });
+  field.addEventListener('input', () => clearFieldError(field));
 });
